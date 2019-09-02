@@ -35,7 +35,7 @@ total_1 = total.iloc[3:8]
 figure_pie = plt.pie(total_1.values, labels=total_1.index, autopct='%3.1f%%',
         colors=['b', 'royalblue', 'gray', 'coral', 'orangered'])
 plt.title('Time Distribution')
-plt.savefig('Time Distribution')
+plt.savefig('Time_Distribution')
 
 
 total_detailed = total.iloc[9:]
@@ -43,7 +43,7 @@ total_detailed[1],total_detailed[2] = total_detailed[2],total_detailed[1]
 print(total_detailed)
 plt.pie(total_detailed.values, labels=total_detailed.index, autopct='%3.1f%%')
 plt.title('Detailed Time Distribution')
-plt.savefig('Detailed Time Distribution')
+plt.savefig('Detailed_Time_Distribution')
 
 # 每日总时间
 figure1 = data['TotalTime'].plot(color='b', alpha=0.5)
@@ -56,12 +56,12 @@ plt.ylim((0, 660))
 plt.title('Total Time on Computer in August')
 plt.ylabel('Time/min')
 plt.xlabel('Date')
-plt.savefig('Total Time on Computer in August')
+plt.savefig('Total_Time_on_Computer_in_August')
 
 data_main = data[['VeryProductiveTime', 'ProductiveTime', 'NeutralTime', 'DistractingTime', 'VeryDistractingTime']]
 figure2 = data_main.plot.barh(stacked=True, color=['b', 'royalblue', 'gray', 'coral', 'orangered'], alpha=0.7)
 plt.title('Detailed Time on Computer in August')
-plt.savefig('Detailed Time on Computer in August')
+plt.savefig('Detailed_Time_on_Computer_in_August')
 plt.show()
 
 
